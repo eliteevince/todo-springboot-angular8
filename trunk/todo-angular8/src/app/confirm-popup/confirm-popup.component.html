@@ -1,0 +1,12 @@
+<ng-template #confirm let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Confirmation...</h4>
+    </div>
+    <div class="modal-body">
+        {{message}}
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="modal.dismiss('Cross click')">Cancel</button>
+        <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Delete</button>
+    </div>
+</ng-template>

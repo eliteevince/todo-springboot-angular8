@@ -1,0 +1,31 @@
+<app-add-todo-popup [todo]="todo" (getToDos)="getToDosOnModify($event)"></app-add-todo-popup>
+<app-confirm-popup></app-confirm-popup>
+<app-readmore-popup></app-readmore-popup>
+<div class="container">
+    <h3 class="pb-3 mb-4 font-italic border-bottom">
+        To Do List 
+        <button class="btn btn-success btn-sm mr-2 round-button" (click)="eventPopup.callBySelf()" title="Add"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        <button class="btn btn-danger btn-sm mr-2 round-button" [disabled]="selectedToDos.length<=0" (click)="deleteAll(todo)" title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        <button class="btn btn-warning btn-sm mr-2 round-button" [ngClass]="{'btn-warning': isAllSelected, 'btn-defauls': !isAllSelected}" (click)="selectAll()" title="Check all"><i class="fa fa-check" aria-hidden="true"></i></button>
+    </h3>
+
+    <div class="alert alert-danger" *ngIf="toDos.length<=0">Data not found</div> 
+    <div class="row">
+        <div class="col-md-3 card-padding" *ngFor="let todo of toDos">
+             <div class="card bg-light">
+                <label class="custom-check">
+                    <input type="checkbox" [(ngModel)]="todo.isChecked" (ngModelChange)="selectTodo(todo)">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="card-body">
+                    <h5 class="card-title border-bottom pb-3">{{todo.title}}</h5>
+                    <h6><i class="fa fa-calendar"></i> {{todo.eventTime}}</h6>
+                    <p class="card-text">{{todo.description}}</p>
+                    <button class="btn btn-sm btn-default" (click)="readPopup.openReadMore(todo)" >Read More</button>
+                    <button class="btn btn-sm btn-danger float-right" (click)="deleteOne(todo.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    <button class="btn btn-sm btn-success float-right mr-2" [disabled]="currentTime>=todo.eventTimeMilis" (click)="editTodo(todo)"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

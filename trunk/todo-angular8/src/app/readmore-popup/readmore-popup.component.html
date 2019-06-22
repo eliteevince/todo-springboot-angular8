@@ -1,0 +1,11 @@
+<ng-template #readmore let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{todo.title}}<span class="small"> ({{todo.eventTime}})</span></h4>
+    </div>
+    <div class="modal-body">
+        <pre>{{todo.description}}</pre>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="modal.dismiss('Cross click')">Cancel</button>
+    </div>
+</ng-template>

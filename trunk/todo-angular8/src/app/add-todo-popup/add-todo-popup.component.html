@@ -1,0 +1,42 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{addUpdate}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="event-title" class="model-label"><span class="text-danger">*</span>Title :</label> <input class="form-control" name="event-title" id="event-title" type="text" [(ngModel)]="todo.title">
+                <div class="small form-text text-danger" *ngIf="validationMsg.title">*{{validationMsg.title}}</div>
+                <br>
+                <label for="event-description" class="model-label"><span class="text-danger">*</span>Description :</label> <textarea class="form-control" name="event-description" id="event-description" [(ngModel)]="todo.description"></textarea>
+                <div class="small form-text text-danger" *ngIf="validationMsg.description">*{{validationMsg.description}}</div>
+                <br>
+                <label class="model-label"><span class="text-danger">*</span>Date :</label> 
+                <div class="input-group">
+                    <input class="form-control" placeholder="yyyy-mm-dd" readonly='true'
+                           name="eDate" [(ngModel)]="todo.eDate" dateFormat ="dd-MM-yyyy" [minDate]="currentDate" ngbDatepicker #d="ngbDatepicker">
+                           <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                    </div>
+                </div>
+                <div class="small form-text text-danger" *ngIf="validationMsg.eDate">*{{validationMsg.eDate}}</div>
+                <br>
+                <label class="model-label"><span class="text-danger">*</span>Time :</label> 
+                <ngb-timepicker [formControl]="eTime" [(ngModel)]="todo.eTime" required [meridian]="true"></ngb-timepicker>
+                <div class="small form-text text-danger" *ngIf="!eTime.valid">
+                    <div *ngIf="eTime.errors['dateSelect']">Please Select Date</div>
+                    <div *ngIf="eTime.errors['timeMax']">Please Select Time Before current</div>
+                </div>
+                <div class="small form-text text-danger" *ngIf="validationMsg.eTime">*{{validationMsg.eTime}}</div>
+
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="validateData()">Save</button>
+    </div>
+</ng-template>
+<button class="btn btn-success fixedbutton round-button" title="Add" (click)="callBySelf()"><i class="fa fa-plus" aria-hidden="true"></i></button>
