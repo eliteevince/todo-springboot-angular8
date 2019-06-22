@@ -4,6 +4,7 @@ ToDo application is one of the more beautifully designed application. It offers 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+We have created two module one is for backend which name is springboot-rest and another one is todo-angular8 for front-end with angular8 in trunk folder.
 
 ### Prerequisites
 
@@ -31,16 +32,16 @@ These instructions will get you a copy of the project up and running on your loc
 3. Type spring and search and install it
 4. You can find spring tool 3 add on http://marketplace.eclipse.org/content/spring-tools-3-add-aka-spring-tool-suite-3
 5. For angualr project serach angular in eclipse market
-6. You will find angular plugin http://marketplace.eclipse.org/content/angular-ide and insall it.
+6. You will find angular plugin http://marketplace.eclipse.org/content/angular-ide and install it.
 
 #### Import Spring, angular in eclipse and sql file
 
 1. Find springboot-rest from downloaded package trunk folder and import it into eclipse.
 2. click import with angular project and select todo-angular8 from dowloaded package trunk folder.
-3. Right click on springboot-rest and mavan clean-install from eclipse
+3. Right click on springboot-rest and maven clean-install from eclipse
 4. If any error occurs please check common error section https://github.com/eliteevince/todo-springboot-angular8/blob/master/README.md#common-errors
 5. On downloaded package you will find sql folder, and import todo_manager.sql in mysql
-6. Find application.properties from springboot-rest and change username and password according to MySql(Also change port if require)
+6. Find application.properties from springboot-rest and change username and password according to MySql(Also change port if required)
 
 
 #### Run projects
@@ -48,7 +49,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. Select JavaApplication SpringDemoApplication (from package todoweb.SpringDemoApplication.java)
 3. If any error occurs please check common error section https://github.com/eliteevince/todo-springboot-angular8/blob/master/README.md#common-errors
 4. Right click on todo-angular8 and run with angular web application
-5. Project will run on browser automaticall. It may take some time to run first time.
+5. Project will run on browser automatically. It may take some time to run first time.
 
 #### Common Errors
 1. The requested profile "pom.xml" could not be activated because it does not exist.
@@ -57,6 +58,6 @@ These instructions will get you a copy of the project up and running on your loc
 	Step - 3 Select Maven in the left hand side list.
 	Step - 4 You will notice "pom.xml" in the Active Maven Profiles text box on the right hand side. Clear it and click Apply.
 
-2. Ignor pom.xml error
+2. Ignore pom.xml error
 
 3. Access denied for user 'root'@'localhost' (using password: NO) : Please check you application.properties from springboot-rest
