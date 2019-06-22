@@ -20,9 +20,13 @@ We have created two module one is for backend which name is springboot-rest and 
     `cd todo-angular8` (root path of ToDoApplication)
     
    Extra library
+
 	`npm install bootstrap --save`	
+
 	`npm install --save @ng-bootstrap/ng-bootstrap`
+
 	`npm install --save font-awesome angular-font-awesome`
+
 	`npm install ngx-toastr --save`
 
 #### Add Springboot sts and angular plugins in eclipse
@@ -53,9 +57,13 @@ We have created two module one is for backend which name is springboot-rest and 
 
 #### Common Errors
 1. The requested profile "pom.xml" could not be activated because it does not exist.
+
 	Step - 1 Right click on your project in Eclipse
+
 	Step - 2 Click Properties
-	Step - 3 Select Maven in the left hand side list.
+
+	Step - 3 Select Maven in the left hand side list
+
 	Step - 4 You will notice "pom.xml" in the Active Maven Profiles text box on the right hand side. Clear it and click Apply.
 
 2. Ignore pom.xml error
