@@ -7,15 +7,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-1:Java version - 8  download from  here : 
-2:Apche tomact -  download from  here : 
+1. Java version - 8  download from  here : 
+2. Apche tomact -  download from  here : 
 	- download  tomcat from 
 	- extract download zip or tar.gz file in drive location
 
-3:Define Java Home ,Maven Home
+3. Define Java Home ,Maven Home
  - define System variable 
-	:>Go to My Computer>Right Click >Go To Properties>Click on Advance System Setting >Find Environment variable>click on Varible >Find Sysem Varibles>Click on new 
-	> Add variable_name and variable_value 
+ 	Go to My Computer ->Right Click ->Go To Properties ->Click on Advance System Setting ->Find Environment variable ->click on 		Varible Find Sysem Varibles ->Click on new -> Add variable_name and variable_value 
 		--like  variable_name:JAVA_HOME
 		--variable_value:C:\Program Files (x86)\Java\jdk1.8.0_60
 		--same add JRE_HOME and MAVEN_HOME
@@ -34,13 +33,14 @@ These instructions will get you a copy of the project up and running on your loc
 4. Install nodejs, go the homepage https://nodejs.org/en/download/
 
 5. Install angular 8
-    npm install -g @angular/cli
-cd ToDoList (root path of ToDoApplication)
-Entra library
-npm install bootstrap --save	
-npm install --save @ng-bootstrap/ng-bootstrap
-npm install --save font-awesome angular-font-awesome
-npm install ngx-toastr --save
+    `npm install -g @angular/cli`
+    `cd ToDoList` (root path of ToDoApplication)
+    
+   Extra library
+	`npm install bootstrap --save`	
+	`npm install --save @ng-bootstrap/ng-bootstrap`
+	`npm install --save font-awesome angular-font-awesome`
+	`npm install ngx-toastr --save`
 
 6. Run the project using below command 
-ng serve -o (-o is optional for open browser after compiling code)
+       	`ng serve -o` (-o is optional for open browser after compiling code)
