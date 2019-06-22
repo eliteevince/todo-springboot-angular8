@@ -17,7 +17,7 @@ We have created two module one is for backend which name is springboot-rest and 
 
 2. Install angular 8
     `npm install -g @angular/cli`
-    `cd ToDoList` (root path of ToDoApplication)
+    `cd todo-angular8` (root path of ToDoApplication)
     
    Extra library
 	`npm install bootstrap --save`	
@@ -25,7 +25,7 @@ We have created two module one is for backend which name is springboot-rest and 
 	`npm install --save font-awesome angular-font-awesome`
 	`npm install ngx-toastr --save`
 
-#### Add Springboot sts plugin and angular plugin eclipse
+#### Add Springboot sts and angular plugins in eclipse
 
 1. We have to add sts eclipse plugin
 2. Go to eclipse market place(preference/eclipse market place)
@@ -34,20 +34,20 @@ We have created two module one is for backend which name is springboot-rest and 
 5. For angualr project serach angular in eclipse market
 6. You will find angular plugin http://marketplace.eclipse.org/content/angular-ide and install it.
 
-#### Import Spring, angular in eclipse and sql file
+#### Import Spring, angular modules in eclipse and sql file in MySql
 
-1. Find springboot-rest from downloaded package trunk folder and import it into eclipse.
-2. click import with angular project and select todo-angular8 from dowloaded package trunk folder.
+1. Find springboot-rest module from downloaded git repository trunk folder and import it into eclipse.
+2. click import with angular module and select todo-angular8 from dowloaded git repository trunk folder.
 3. Right click on springboot-rest and maven clean-install from eclipse
-4. If any error occurs please check common error section https://github.com/eliteevince/todo-springboot-angular8/blob/master/README.md#common-errors
-5. On downloaded package you will find sql folder, and import todo_manager.sql in mysql
+4. If any error occurs then kindly check common error section https://github.com/eliteevince/todo-springboot-angular8/blob/master/README.md#common-errors
+5. Import todo_manager.sql in mysql from downloaded git repository sql folder.
 6. Find application.properties from springboot-rest and change username and password according to MySql(Also change port if required)
 
 
 #### Run projects
 1. Right click on springboot-rest and run as Java Application
 2. Select JavaApplication SpringDemoApplication (from package todoweb.SpringDemoApplication.java)
-3. If any error occurs please check common error section https://github.com/eliteevince/todo-springboot-angular8/blob/master/README.md#common-errors
+3. If any error occurs then kindly check common error section https://github.com/eliteevince/todo-springboot-angular8/blob/master/README.md#common-errors
 4. Right click on todo-angular8 and run with angular web application
 5. Project will run on browser automatically. It may take some time to run first time.
 
